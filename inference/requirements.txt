@@ -7,3 +7,6 @@ optimum==2.0.0
 optimum-onnx==0.0.3
 transformers==4.55.4
 python-dotenv==1.2.1
+pytest==9.0.1
+pytest-benchmark==5.2.3
+httpx==0.28.1

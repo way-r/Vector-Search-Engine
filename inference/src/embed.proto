@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package embed;
+
+service EmbedService {
+    rpc GetEmbed(EmbedRequest) returns (EmbedResponse);
+}
+
+message EmbedRequest {
+    string text = 1;
+}
+
+message EmbedResponse {
+    enum Status {
+        INCOMPLETE=0;
+        COMPLETE=1;
+        FAILED=2;
+    }
+    Status status = 1;
+    oneof payload {
+        EmbedValue embed=2;
+        string error=3;
+    }
+}
+
+message EmbedValue {
+    repeated float values=1;
+}

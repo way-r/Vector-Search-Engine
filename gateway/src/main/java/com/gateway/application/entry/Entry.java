@@ -47,4 +47,16 @@ public class Entry {
         this.uploaded = uploaded;
         this.completed = completed;
     }
+
+    public String get_abstract_content() {
+        return this.abstract_content;
+    }
+
+    public void set_embed_status(String status) {
+        this.embed_status = status;
+    }
+
+    public void set_completed(LocalDateTime completed_time) {
+        this.completed = completed_time;
+    }
 }
